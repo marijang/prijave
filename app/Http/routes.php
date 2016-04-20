@@ -21,6 +21,7 @@ Route::get('/code', function () {
 Route::get('/', 'ApplicationController@index');
 Route::post('/apply', 'ApplicationController@apply');
 Route::get('/all', 'ApplicationController@prijave');
+Route::get('/izvuci', 'ApplicationController@izvuci');
 
 Route::get('/success', function () {
 	return 'Uspješnos te se prijavili';

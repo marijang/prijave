@@ -13,6 +13,14 @@ class ApplicationController extends Controller
     public function index(){
     	return view('application.welcome');
     }
+
+    public function izvuci(){
+        $random_user = Userapplication::orderBy(\DB::raw('RAND()'))->get();
+            $randomusers = Userapplication::orderBy(DB::raw('RAND()'))->take(5)->get();
+            $user  = Userapplication::all();
+            $count = Userapplication::count();
+        return view('application.spinner')->with(['prijave'=>$user,'ukupno'=>$count,'randomusers'=>$randomusers]);
+    }
  
     public function apply(Request $request){
     		$name = $request->input('name');

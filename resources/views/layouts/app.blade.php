@@ -49,6 +49,7 @@
                 <ul class="nav navbar-nav" >
                     <li><a href="{{ url('/') }}">Prijavi se</a></li>
                     <li><a href="{{ url('/all') }}">Pregled prijava</a></li>
+                    <li><a href="{{ url('/izvuci') }}">Izvuci pobjednika</a></li>
                     <li><a href="{{ url('/code') }}">QRCode</a></li>
                 </ul>
 
@@ -79,6 +80,9 @@
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    <script src="js/spinner.js"></script>
+    @yield('script')
 </body>
 </html>
